@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Encryption</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        body{
+            
+                background-image: url(/static/background.jpg);
+        }
+        .row {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+  
+#div1 {
+              border-radius: 5px;
+              background-color: #a0d8d8e8;;
+              padding: 30px;
+              width: 50%;
+            }
+            #div2{
+                border-radius: 5px;
+                padding: 10px;
+                width: 50%;
+            }
+        input[type=file] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+
+        p, h1, h2,h3, b{
+            color: white;
+        }
+
+        input[type=text] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        
+        button {
+          width: 100%;
+          background-color:  #11a0a0;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        button:hover {
+          background-color:  #1a979794;
+        }
+        
+        
+
+        .container{
+            background-color: black;
+            width: fit-content;
+            
+        }
+        </style>
+
+        <style>
+            img {
+              float: right;
+            }
+            </style>
+</head>
+<body>
+    <h2>File Encryption</h2>
+    <div class="row">
+    <div class="column" id="div1">
+    <form id="file-form" action="{{url_for('fileenc')}}" method='POST' autocomplete="off" enctype="multipart/form-data">
+        <input type="file" name="file"><br><br>
+        
+        
+        <button type="submit" value="submit" name="enc">Encrypt File</button> </form></div>
+
+        <div class="column" id="div2">
+        <a href="{{url_for('filedec')}}"><br> <img class="main" border="0" alt="decryption" src="/static/file decrypt canva.jpg" width="300" height="300" </a></a>
+        </div>
+    </div>
+        <br>
+        <div class="container">
+        <h2> File Encryption</h2>   
+        <p> <img src="/static/FE1.jpg" alt="Fe" style="width:250px;height:100px;margin-left:15px;">     
+            File encryption protects individual files or file systems by encrypting them with a specific key, making them accessible only to the keyholder. The goal is to prevent malicious or unauthorized parties from accessing files that are stored on the disk. Support for file encryption can be built into an operating system or file system. A decryption key allows access to the sensitive files. File encryption is helpful if a user needs to send individual files securely over the internet or store them on a removable device such as a USB stick. A file in transit is sometimes referred to as data in motion. Using encrypted files and drives is normally something you can do without even thinking about it. In most cases, simply logging into your computer is all that is needed to access the data. However, in some cases you may need a special USB drive inserted into your computer before you log in. Of course, if the files or the encryption keys are lost or corrupted, getting in can be more difficult. For instance, if you work in life sciences, you may need dependable ways to keep revolutionary new designs or breakthrough drug patents from falling into competitors' hands. Or perhaps you work in media and need reliable ways to keep the hottest new screenplay under wraps so no one can leak spoilers. Maybe you work in law, finance, or other professional sectors where your clients trust you to keep their personal information confidential and secure. 
+
+            File encryption offers a practical solution. It allows you to render your sensitive data unreadable to all but the authorized recipients.    
+          </p>
+          <br>
+          <br>
+          <br>
+            </div>
+
+        
+</body>
+</html>

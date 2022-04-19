@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Decryption</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        body{
+            
+                background-image: url(/static/background.jpg);
+        };
+        input[type=file] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+
+        p, h1, h2,h3, b{
+            color: white;
+        }
+
+        input[type=text] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        
+        button {
+          width: 100%;
+          background-color:  #11a0a0;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        button:hover {
+          background-color:  #1a979794;
+        }
+        
+        div {
+          border-radius: 5px;
+          background-color: #a0d8d8e8;;
+          padding: 20px;
+          width: 50%;
+        }
+
+        .container{
+            background-color: black;
+            width: fit-content;
+        }
+        </style>
+
+        <style>
+            img {
+              float: right;
+            }
+            </style>
+</head>
+<body>
+    <h2>File Decryption</h2>
+    <div>
+    <form id="file-form" action="{{url_for('filedecrypt')}}" method='POST' autocomplete="off" enctype="multipart/form-data">
+        <input type="file" name="file"><br><br>
+        
+        
+        <button type="submit" value="submit" name="enc">Decrypt File</button> </form></div>
+
+        <br>
+        <div class="container">
+        <h2>File Decryption</h2>            
+        <p>The conversion of encrypted data into its original form is called Decryption. It is generally a reverse process of encryption. <img src="/static/FE2.png" alt="fe" style="width:250px;height:190px;margin-left:15px;"> It decodes the encrypted information so that an authorized user can only decrypt the data because decryption requires a secret key or password. 
+            <p> One of the reasons for implementing an encryption-decryption system is privacy. As information travels over the Internet, it is necessary to scrutinise the access from unauthorized organisations or individuals. Due to this, the data is encrypted to reduce data loss and theft. Few common items that are encrypted include text files, images, e-mail messages, user data and directories. The recipient of decryption receives a prompt or window in which a password can be entered to access the encrypted data. For decryption, the system extracts and converts the garbled data and transforms it into words and images that are easily understandable not only by a reader but also by a system. Decryption can be done manually or automatically. It may also be performed with a set of keys or passwords.
+There are many methods of conventional cryptography, one of the most important and popular method is Hill cipher Encryption and Decryption, which generates the random Matrix and is essentially the power of security. Decryption requires inverse of the matrix in Hill cipher. Hence while decryption one problem arises that the Inverse of the matrix does not always exist. If the matrix is not invertible then the encrypted content cannot be decrypted. This drawback is completely eliminated in the modified Hill cipher algorithm. Also this method requires the cracker to find the inverse of many square matrices which is not computationally easy. So the modified Hill-Cipher method is both easy to implement and difficult to crack.</p>
+<br>
+<br>
+<br>
+            </div>
+    
+</body>
+</html>
