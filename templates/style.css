@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+*{
+    padding:5px;
+    margin:5px;
+    box-sizing:border-box;
+}
+
+body{
+font-family: 'Oswald', sans-serif;
+font-size: 1 rem;
+background-color: aliceblue;
+}
+
+header {
+background-color: none;
+}
+
+button{
+    padding: 8px;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid rgb(16, 16, 77);
+    border-radius: 5px;
+    background-color: aliceblue;
+}
+
+button:hover{
+    background-color: cornsilk;
+}
+
+.container1{
+    width:95%;
+    margin:left;
+}
+
+.container2{
+    width:95%;
+    margin:center;
+}
+
+.container3{
+    width:95%;
+    margin:right;
+}
+
+
+.create-box1{
+    width: 300px;
+    margin:left;
+    padding:20px;
+    margin-top:10px;
+    border-radius:5px;
+    background-color: aliceblue;
+    box-shadow: 0 2px 4px 0 black;
+}
+
+.create-box2{
+    width: 300px;
+    margin:center;
+    padding:20px;
+    margin-top:10px;
+    border-radius:5px;
+    background-color: aliceblue;
+    box-shadow: 0 2px 4px 0 black;
+}
+
+.create-box3{
+    width: 300px;
+    margin:right;
+    padding:20px;
+    margin-top:10px;
+    border-radius:5px;
+    background-color: aliceblue;
+    box-shadow: 0 2px 4px 0 black;
+}
+
+
+
+
+
+.create-box button{
+    width:fit-content;
+}
+
+.flashcards{
+    display: flex;
+    justify-content:flex-star;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    width:100%;
+    margin:auto;
+    margin-top:10px;
+    padding:0 10px;
+
+}
+
+.flashcard h2{
+    font-size: 1rem;
+}
+
+

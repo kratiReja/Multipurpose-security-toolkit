@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title> Multi Purpose Web Security Tool Kit </title>
+    <style>
+        body {
+          background-image: url(/static/background.jpg);
+        }
+        </style>
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+    
+
+  
+  <style>
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: rgba(222, 226, 245, 0.938);
+    }
+    
+    li {
+      float: right;
+    }
+    
+    li a {
+      display: block;
+      color: rgb(14, 4, 4);
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    li a:hover {
+      background-color: rgb(240, 241, 222);
+    }
+    img{
+        display: inline-block;
+        margin: 70px 70px;
+
+    }
+    p{
+      color:white;
+      font-size: 30px;
+    }
+    .navbar {
+  width: 100%;
+  background-color: rgba(160, 245, 231, 0.938);
+  
+  
+  overflow: hidden;
+  
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%;
+    }
+
+.navbar a {
+  
+  margin: 5px;
+  padding: 7px;
+  color: black;
+  text-decoration:none;
+  font-size: 17px;
+  text-align: center;
+ 
+}
+
+.navbar a:hover {
+  background-color: beige;
+  
+}
+
+.active {
+  float: left;
+  padding :12px;
+  font-size:17px;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+    </style>
+
+</head>
+<br> <br>
+
+<body>
+
+
+  <nav>
+    <div class="navbar">
+      <a class="active" href="{{url_for('home')}}"> Home</a> 
+      <a class="active" href="#aboutus"> About Us</a> 
+      <a class="active" href="#tools"> Tools</a> 
+      <a class="active" href="#team"> Team</a> 
+    </div></nav>
+      <br>
+      <div id="aboutus">
+      <b><h2 style="text-align:center; color: white; font-size: 50px"> Multi Purpose Web Security Tool Kit.</h2></b><br>
+     </div>
+      <div >
+        <br><br><br><br>
+      <b><h2 style="text-align:center; color: rgb(215, 208, 252); font-size: 40px"> About Us </h2></b>
+      
+        <p> We provide one step solution to cyber security professionals, students and for people who are enthusiastic to learn new things about their security, networking and many more stuffs. Therefore, the main purpose is that we will empower the people with common security tools which are required for every person in their personal day to day life or professional life as well. We will also provide learnings on how to use various tools and knowledge about how to perform the respective tasks. Hence The tools are carefully selected and organized to make it easy to search, find and implement basic cybersecurity controls so that peers get familiar with all of them.   </p>
+      </div>
+    <br> <br> <br> 
+
+    <br> 
+    <div id="tools">
+      <br><br><br>
+    <b><h2 style="text-align:center; color: rgb(215, 208, 252); font-size: 40px"> Tools </h2></b></div>
+
+
+    <a href="{{url_for('steg')}}"><img border="0"src="/static/IS.jpg" width="300" height="300"</a>
+    <a href="{{url_for('encrypt')}}" > <img border="0" alt="Encryption and Decryption" src="/static/ED.jpg" width="300" height="300"</a>
+    <a href="{{url_for('fenc')}}"> <img border="0" alt="File Encryption" src="/static/FED.jpg" width="300" height="300"</a></a>
+    <a href="{{url_for('hash')}}">Hash Calculator</a>
+    <a href="{{url_for('imageenc')}}">Image Encryption</a>
+    
+    
+
+    <br><br><br><br><br><br>
+    <div id="team" >
+      
+    <b><h2 style="text-align:center; color: rgb(215, 208, 252); font-size: 40px"> Team </h2></b>
+    
+      <p > Krati Reja <br> @Email: krati.reja2018@vitbhopal.ac.in </p>
+      <p> Aachal Tiwari <br> @Email: aachal.tiwari2018@vitbhopal.ac.in</p>
+      <p > Rahul Raj <br> @Email: rahul.raj2018@vitbhopal.ac.in</p>
+    </div>
+    
+    </body>
+    </html>

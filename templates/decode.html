@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decode</title>
+
+    <style>
+        body{
+            
+                background-image: url(/static/background.jpg);
+        };
+        input[type=file] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+
+        p, h1, h2,h3, b{
+            color: white;
+        }
+
+        input[type=text] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        
+        button {
+          width: 100%;
+          background-color:  #11a0a0;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        button:hover {
+          background-color:  #1a979794;
+        }
+        
+        div {
+          border-radius: 5px;
+          background-color: #a0d8d8e8;;
+          padding: 20px;
+          width: 50%;
+        }
+
+        .container{
+            background-color: black;
+            width: fit-content;
+        }
+        </style>
+
+        <style>
+            img {
+              float: right;
+            }
+            </style>
+</head>
+<body>
+    <h2>Decode Data from Image</h2>
+    <div>
+    <form id="steg-form" action="{{url_for('decode')}}" method='POST' autocomplete="off" enctype="multipart/form-data">
+        <input type="file" name="file"><br><br>
+       
+        
+        <button type="submit" value="submit" name="decode">Decode</button> </form> </div>
+
+        <br>
+        <div class="container">
+        <h2>Decode</h2>            
+        <p><img src="/static/decrypt.jpg" alt="fe" style="width:200px;height:200px;margin-left:15px;">
+            <p> Image decoding is the process of converting the encoded image back to a uncompressed bitmap which can then be rendered on the screen. This involves the exact reverse of the steps involved in encoding the image. For example, for a JPEG, it involves the following steps:-
+
+                The data goes through a Huffman decoding process.
+                The result then goes through a Inverse Discrete Cosine Transformation (IDCT) and dequantization process to bring the image back from the frequency space to the colour space.
+                Chroma Upsampling is applied.
+                Finally, the image is converted from the YCbCr format to RGB.
+                After the image is decoded, it is then stored in an internal cache by the browser. As a user scrolls through the page, the browser decodes the necessary images and starts painting on the screen. The decoded image can take up quite a bit of memory. For example, a simple 300x400 truecolour PNG image (which has RGBA channels) will take 4 * 300 * 400 = 480,000 bytes. And this is just the space required to store one image in memory. Given that modern webpages can easily have 20 or 30 images, this can quickly add up. Here is where browsers have to make the usual tradeoff between storage and computation - storing more images in memory means that the browser doesn’t need go through the expensive decode operation every time it needs to be painted on the screen but leads to a higher RAM usage. Since the browser can re-decode the image any time, it can release this memory back to the operating system when it is short on memory.</p>
+                <br>
+                <br>
+                <br>
+             </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Image Steganography </title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+        <script src='main.js'></script>
+        <style>
+            body{
+                
+                    background-image: url(/static/background.jpg);
+            };
+            input[type=file] {
+              width: 100%;
+              padding: 12px 20px;
+              margin: 8px 0;
+              display: inline-block;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              box-sizing: border-box;
+            }
+    
+            .row {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+    
+            p, h1, h2,h3, b{
+                color: white;
+            }
+    
+            input[type=text] {
+              width: 100%;
+              padding: 12px 20px;
+              margin: 8px 0;
+              display: inline-block;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              box-sizing: border-box;
+            }
+            
+            button {
+              width: 100%;
+              background-color:  #11a0a0;
+              color: white;
+              padding: 14px 20px;
+              margin: 8px 0;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+            }
+            
+            button:hover {
+              background-color:  #1a979794;
+            }
+            
+            #div1 {
+              border-radius: 5px;
+              background-color: #a0d8d8e8;;
+              padding: 30px;
+              width: 50%;
+            }
+            #div2{
+                border-radius: 5px;
+                padding: 10px;
+                width: 50%;
+            }
+    
+            .container{
+                background-color: black;
+                width: fit-content;
+            }
+            </style>
+    
+            <style>
+                img {
+                  float: right;
+                }
+            
+                </style>
+    </head>
+    <body>
+        <h1>Steganography</h1>
+        <h3>Encoding </h3>
+        <div class="row">
+        <div class="column" id="div1">
+        <form id="steg-form" action="{{url_for('upload')}}" method='POST' autocomplete="off" enctype="multipart/form-data">
+            <input type="file" name="file"><br><br>
+            <label for="fname"> Enter text to Hide : </label>
+            <input type="text" id="text" name="text"><br><br>
+            
+            <button type="submit" value="submit" name="encode">Encode</button> </form> 
+        </div>
+            <div class="column" id="div2">
+              
+            <a href="{{url_for('dec')}}"> <br> <img class="main" border="0" alt="Image Steganography" src="/static/decodecanva.jpg" width="400" height="350" </a></a> 
+    
+    </div>
+    </div>
+            
+            <br>
+            
+            <div class="container">
+            <h2>Image Steganography</h2>            
+            <p> <img src="/static/datahide.jpg" alt="datahide" style="width:200px;height:200px;margin-left:15px;">
+                <p>Steganography is the study and practice of concealing information within objects in such a way that it deceives the viewer as if there is no information hidden within the object.Simply put, it is hiding information in plain sight, such that only the intended recipient would get to see it.Let’s consider a scenario where two employees are expected to exchange official messages via email. In this case, we know that they will exchange messages, and hence, there is no need for them to hide those messages. However, as those messages might contain sensitive information, they might want to encrypt-decrypt it using cryptography. On the contrary, consider information exchange between a spy, operating undercover in the opponents’ military regiment and his parent organization, with whom he wants to share important information. In this case, the officers would be monitoring pretty much everything that goes in and out of his room. Hence, if he resorts to using cryptography to share encrypted information, officers might get suspicious. In such a situation, he might prefer image steganography, where he would deceptively hide a message within another object/message, without raising suspicions, and find a way to drop it off to his recipient. In summary, cryptography hides the meaning of the data, while steganography hides the existence of the data. Although they are different techniques, they might as well be used in combination, in the same instance, to get the best of both worlds. </p>
+                <br>
+                <br>
+                <br>    
+            </div>
+    
+    
+         
+    </body>
+    </html>
+</body>
+</html>
