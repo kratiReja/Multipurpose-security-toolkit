@@ -1,7 +1,8 @@
 
 
 
-from flask import Flask, redirect,render_template,request,flash,jsonify
+
+from flask import Flask, redirect,render_template,request,flash,jsonify,url_for
 import os
 from PIL import Image
 import stepic
@@ -9,6 +10,9 @@ from Crypto.Cipher import AES
 import base64
 from cryptography.fernet import Fernet
 import hashlib
+import requests
+import time
+import socket
 
 
 
@@ -210,21 +214,39 @@ def shaaa():
          buff=f.read()
          hash=hashlib.sha512(buff).hexdigest()
         return hash     
-'''
+
 @app.route("/integrity")
 def integrity():
     return render_template("integritycalc.html")
 @app.route("/integritycheck",methods=['POST'])
 def integritycheck():
+    '''
+    target =os.path.join(APP_ROOT,'integritycheck/')
+    if not os.path.isdir(target):
+        os.mkdir(target)
+
+    for file in request.files.getlist('file'):
+        filename=file.filename
+        destination="/".join([target,filename])
+        file.save(destination)
+  '''
     if request.method=='POST':
-        for f in request.files.getlist('filename'):
+         filess1=request.files["file1"]
+         filess2=request.files["file2"]
+         filename=filess1.filename
+         with open(filename, 'rb') as f:
+          buff=f.read()
+          hash1=hashlib.sha512(buff).hexdigest()
+         filename=filess2.filename
+         with open(filename, 'rb') as f:
+          buff=f.read()
+          hash2=hashlib.sha512(buff).hexdigest()
+    if hash1==hash2:
+        return("No data modified.....Both Files are same") 
+    else:
+        return("Data is modified....Files are not same")      
          
-         filename=f.filename
-         with open(filename, 'rb') as g:
-          buff=g.read()
-          hash=hashlib.sha512(buff).hexdigest()
-          print(hash)
-'''        
+         
 #Image encryption
 @app.route('/imageenc') 
 def imageenc():
@@ -278,9 +300,77 @@ def imdec():
           f1.close()
      return "Image Decrypted Successfully!!!"
 
+##malicious url detection
+
+@app.route('/checkurl')
+def checkurl():
+    return render_template('checkurl.html')
+@app.route('/maliciousurl',methods=['POST'])
+def maliciousurl():
+    url=request.form['url']
+    r=requests.get('https://ipqualityscore.com/api/json/url/YjDKvBHaJ5apXzvAkTLxJ4coL3u8YBOn/'+url)
+    json_object=r.json()
+    domain=json_object.get("domain")
+    spamming=json_object.get("spamming")
+    malware=json_object.get("malware")
+    phishing=json_object.get("phishing")
+    suspicious=json_object.get("suspicious")
+    adult=json_object.get("adult")
+    risk_score=json_object.get("risk_score")
+    category=json_object.get("category")
+    return render_template('urldisplay.html',domain=domain,spamming=spamming,malware=malware,phishing=phishing,suspicious=suspicious,adult=adult,risk_score=risk_score,category=category)
+## www.wicar.org/
+## ipqualityscore
 
 
+## Port Scanner
 
+@app.route('/pscan')
+def scan():
+    return render_template('pscan.html')
+
+@app.route('/hello_world/<name>')
+def hello_world(name):
+    S = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    target = name
+    target_ip = socket.gethostbyname(target)
+    print('Starting scan on host:', target_ip)
+    openp = []
+    closedp = []
+
+    def port_scan(port):
+        try:
+            S.connect((target_ip, port))
+            return True
+        except:
+            return False
+
+    start = time.time()
+    for port in range(1024):
+        if port_scan(port):
+            print(f'port {port} is open')
+            openp.append(port)
+        else:
+            print(f'port {port} is closed')
+            closedp.append(port)
+
+    end = time.time()
+    print(f'Time taken {end-start:.2f} seconds')
+    if len(openp):
+        return render_template('openp.html', nawa=openp)
+
+    else:
+        return render_template('closedp.html', nani=closedp)
+
+
+@app.route('/pscan', methods=['POST', 'GET'])
+def pscan():
+    if request.method == 'POST':
+        user = request.form['nm']
+        return redirect(url_for('hello_world', name=user))
+    else:
+        user = request.args.get('nm')
+        return redirect(url_for('hello_world', name=user))
 
 
     
