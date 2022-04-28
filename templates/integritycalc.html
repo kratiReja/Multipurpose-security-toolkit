@@ -10,8 +10,15 @@
     <form id="integrity-form" action="{{url_for('integritycheck')}}"  method='POST' autocomplete="off" enctype="multipart/form-data">
         
         <label for="fname">Select File to calculate Hash  </label>
-        <input type="file" name="file" multiple><br><br>
+        <input type="file" name="file1" ><br><br>
         
-        <button type="submit" value="submit" name="integrity">calculate</button> </form>
+   
+        <br><br>
+        
+        
+            <label for="fname">Select File to calculate Hash  </label>
+            <input type="file" name="file2" ><br><br>
+            
+            <button type="submit" value="submit" name="integrity">calculate</button> </form>
 </body>
 </html>
