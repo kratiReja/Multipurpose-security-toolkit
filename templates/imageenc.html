@@ -4,17 +4,120 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Image Encryption</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        body{
+            
+                background-image: url(/static/background.jpg);
+        }
+        .row {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+        input[type=file] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+
+        p, h1, h2,h3, b{
+            color: white;
+        }
+
+        input[type=text] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        
+        button {
+          width: 100%;
+          background-color:  #11a0a0;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        button:hover {
+          background-color:  #1a979794;
+        }
+        #div1 {
+              border-radius: 5px;
+              background-color: #a0d8d8e8;
+              padding: 30px;
+              width: 50%;
+            }
+            #div2{
+                border-radius: 5px;
+                padding: 10px;
+                width: 50%;
+            }
+        
+        
+
+        .container{
+            background-color: black;
+            width: fit-content;
+        }
+        </style>
+
+        <style>
+            img {
+              float: right;
+            }
+            </style>
 </head>
 <body>
+  <h2>Image Encryption</h2>
+  <div class="row">
+  <div class="column" id="div1">
     <form id="img-form" action="{{url_for('imenc')}}" method='POST' autocomplete="off" enctype="multipart/form-data">
         <input type="file" name="file"><br><br>
         <label for="fname"> Enter Key to Encrypt Image : </label>
         <input type="text" id="text" name="imgtext"><br><br>
         
         <button type="submit" value="submit" name="imageenc">Encrypt</button> </form> 
+
     </div>
-    <br><br>
-    <a href="{{url_for('imagedec')}}">Image Decryption</a>
+    <div id="div2">
+    <a href="{{url_for('imagedec')}}"> <img class="main" border="0" alt="decryption" src="/static/ImageDecryptioncanva.jpg " width="350" height="350" </a></a> 
+    <br>
+    </div>
+    </div><br>
+    
+    <div class="container"> 
+      <h2>Image Encryption</h2>            
+      <p><img src="/static/Imageenc.jpg" alt="fe" style="width:300px;height:200px;margin-left:15px;">
+          <p> Image encryption can be defined in such a way that it is the process of encoding secret image with the help of some encryption algorithm in such a way that unauthorized users can't access it.  This is generally done with normal bits of any passwords or Secure SSL encryption systems. But the concept of introducing the similar encryption algorithm on an image creates a revolution in the field secret message transfer through images. Image encryption works on the innovative idea of taking the consecutive or random pixel bits of an image and collectively worked and modified with logic, thereby leading to a complete set of new of pixel, which is typical from the original bits. <br><br> Encryption algorithm:
+
+            <br> 1. Read the secret image (gray image) with size 256×256
+            <br> 2. Create the sequence of prime numbers, based on this, shuffle the image
+            <br> 3. Again scramble the image with the help of pseudorandom generator
+            <br> 4. Shift the resultant image right or left key times, then convert it into binary
+            <br> 5. Perform bitwise complement in each pixel, prior to that shuffle each bit in every pixel
+            <br> 6. Apply Cipher Block Chaining mode here, then change it into decimal again
+            <br> 7. Once all the steps are performed, name the image as encrypted image
+
+            <br>
+           </div>
 </body>
 </html>

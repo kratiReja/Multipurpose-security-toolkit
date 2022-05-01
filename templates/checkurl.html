@@ -4,14 +4,98 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Check URL</title>
+    <style>
+        body{
+            
+                background-image: url(/static/background.jpg);
+        };
+        input[type=file] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+
+        p, h1, h2,h3, b{
+            color: white;
+        }
+
+        input[type=text] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        
+        button {
+          width: 100%;
+          background-color:  #11a0a0;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        button:hover {
+          background-color:  #1a979794;
+        }
+        
+        div {
+          border-radius: 5px;
+          background-color: #a0d8d8e8;;
+          padding: 50px;
+          width: 90%;
+        }
+
+        .container{
+            background-color: black;
+            width: fit-content;
+        }
+        </style>
+
+        <style>
+            img {
+              float: right;
+            }
+            </style>
 </head>
 <body>
+    <h2>Check URL</h2>
+    <div>
     <form id="url-form" action="{{url_for('maliciousurl')}}"  method='POST' autocomplete="off" enctype="multipart/form-data">
         
         <label for="fname">Enter your Url to check :  </label>
         <input type="text" id="text" name="url"><br><br>
         
         <button type="submit" value="submit" name="scan">scan</button> </form>
+        </div>
+
+        <br>
+    <div class="container">
+      <h2>URL Inspection</h2>            
+      <p><img src="/static/checkurl.jpg" alt="fe" style="width:300px;height:200px;margin-left:15px;">
+          <p> The URL Inspection tool provides information about Google's indexed version of a specific page. Information includes AMP errors, structured data errors, and indexing issues.
+
+            <br> <br> Common tasks include - 
+            
+           <br> 1. See the current index status of a URL: Retrieve information about Google's indexed version of your page. See why Google could or couldn't index your page.
+           <br> 2.Inspect a live URL: Test whether a page on your site is able to be indexed.
+           <br> 3. Request indexing for a URL: You can request that an URL be crawled (or recrawled) by Google.
+           <br> 4. View a rendered version of the page: See a screenshot of how Googlebot sees the page.
+           <br> 5. View loaded resources, JavaScript output, and other information: See a list of resources, page code, and more information by clicking View crawled page (indexed result) or View tested page (live test).
+           <br> 6. Troubleshoot a missing page: There can be many reasons why a page hasn't been indexed. URL Inspection can help troubleshoot some of them.
+
+            
+            <br>
+           </div>
 </body>
 </html>

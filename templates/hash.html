@@ -4,12 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hash</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        body{
+            
+                background-image: url(/static/background.jpg);
+        };
+        input[type=file] {
+          width: 100%;
+          padding: 15px 25px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+
+        p, h1, h2,h3, b{
+            color: white;
+        }
+
+        input[type=text] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        
+        button {
+          width: 100%;
+          background-color:  #11a0a0;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        button:hover {
+          background-color:  #1a979794;
+        }
+        
+        div {
+          border-radius: 5px;
+          background-color: #a0d8d8e8;;
+          padding: 50px;
+          width: 50%;
+          
+        }
+
+        .container{
+            background-color: black;
+            width: fit-content;
+        }
+        
+
+        </style>
+
+        <style>
+            img {
+              margin: auto;
+              display: inline-block;
+              padding: 30px;                     
+              
+            }
+
+
+            </style>
 </head>
+<div class="container"> </div>
 <body>
-    <a href="{{url_for('md5')}}">MD5</a>
-    <a href="{{url_for('sha256')}}">SHA128</a>
-    <a href="{{url_for('sha512')}}">SHA256</a>
-    <a href="{{url_for('integrity')}}">Integrity Calculator</a>
+     
+    <a href="{{url_for('md5')}}"> <img border="0" alt="MD5" src="/static/MD5canva.jpg" width="260" height="300"</a>
+    <a href="{{url_for('sha256')}}"> <img border="0" alt="SHA256" src="/static/SHA256canva.jpg" width="260" height="300"</a>
+    <a href="{{url_for('sha512')}}"> <img border="0" alt="SHA512" src="/static/SHA512canva.jpg" width="260" height="300"</a>
+    <a href="{{url_for('integrity')}}"> <img border="0" alt="Integrity Calculator" src="/static/IntegrityCalccanva.jpg" width="260" height="300"</a>
 </body>
 </html>

@@ -9,49 +9,75 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
     <style>
-        body {
-
-            background-image: url(/static/background.jpg);
+        body{
+            
+                background-image: url(/static/background.jpg);
+        };
+        input[type=file] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
         }
 
-        .row {
-            display: flex;
+        p, h1, h2,h3, b{
+            color: black;
         }
 
+        input[type=text] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        
+        button {
+          width: 100%;
+          background-color:  #11a0a0;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        button:hover {
+          background-color:  #1a979794;
+        }
+        
+        div {
+          border-radius: 5px;
+          background-color: #a0d8d8e8;
+          padding: 50px;
+          width: 100%;
+        }
         #div1 {
-            border-radius: 5px;
+          background-color: black;
+          color: white;
+          
+
+        }
+
+        .container{
             background-color: #a0d8d8e8;
-            ;
-            padding: 30px;
-            width: 50%;
+            width: fit-content;
         }
 
-        #div2 {
-            border-radius: 5px;
-            padding: 10px;
-            width: 50%;
-        }
+        
+        </style>
 
-        p,
-        h1,
-        h2,
-        h3,
-        b {
-            color: white;
-        }
-
-        .something {
-            background-color: #33475b;
-            width: 100%;
-            height: 100%;
-        }
-
-        .container {
-            background-color: rgb(255, 122, 89);
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+        <style>
+            img {
+              float: right;
+            }
+            </style>
 
 
 </head>
@@ -68,6 +94,26 @@
             <p><input type="submit" value="submit" /></p>
         </form>
     </div>
+
+    <br>
+    <div class="container" id="div1" > 
+      <h2 id="div1">Port Scan</h2>            
+      <p><img src="/static/portscan.jpg" alt="fe" style="width:300px;height:200px;margin-left:15px;">
+          <p id="div1"> A port scan is a common technique hackers use to discover open doors or weak points in a network. A port scan attack helps cyber criminals find open ports and figure out whether they are receiving or sending data. It can also reveal whether active security devices like firewalls are being used by an organization. 
+
+            When hackers send a message to a port, the response they receive determines whether the port is being used and if there are any potential weaknesses that could be exploited.
+            
+            Businesses can also use the port scanning technique to send packets to specific ports and analyze responses for any potential vulnerability. They can then use tools like IP scanning, network mapper (Nmap), and Netcat to ensure their network and systems are secure.
+            
+            Port scanning can provide information such as:
+            
+            <br> 1. Services that are running
+            <br> 2. Users who own services
+            <br> 3. Whether anonymous logins are allowed
+            <br> 4. Which network services require authentication
+
+            <br>
+           </div>
 </body>
 
 </html>

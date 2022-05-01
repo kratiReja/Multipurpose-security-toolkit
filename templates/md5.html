@@ -4,14 +4,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MD5</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+      body{
+          
+              background-image: url(/static/background.jpg);
+      };
+      input[type=file] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      p, h1, h2,h3, b{
+          color: white;
+      }
+
+      input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      
+      button {
+        width: 100%;
+        background-color:  #11a0a0;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        background-color:  #1a979794;
+      }
+      
+      div {
+        border-radius: 5px;
+        background-color: #a0d8d8e8;;
+        padding: 20px;
+        width: 50%;
+      }
+
+      .container{
+          background-color: black;
+          width: fit-content;
+      }
+      </style>
+
+      <style>
+          img {
+            float: right;
+          }
+          </style>
+
 </head>
 <body>
+  <h2>MD5 </h2>
+  <div class="row">
+  <div class="column" id="div1">
     <form id="md5-form" action="{{url_for('md')}}"  method='POST' autocomplete="off" enctype="multipart/form-data">
-        
-        <label for="fname">Select File to calculate Hash  </label>
-        <input type="file" name="file"><br><br>
+      <label for="fname"> Select file to calculate hash </label>  <br> <br>
+      <input type="file" name="file"><br><br>
         
         <button type="submit" value="submit" name="md5">calculate</button> </form>
+         
+        </div>
+        </div>
+        <br>
+        <div class="container">
+          <h2>MD5 - Message Digest Algorithm</h2>            
+          <p><img src="/static/MD5.jpg" alt="fe" style="width:200px;height:200px;margin-left:15px;">
+              <p> The MD5 message-digest algorithm is a cryptographically broken but still widely used hash function producing a 128-bit hash value. Although MD5 was initially designed to be used as a cryptographic hash function, it has been found to suffer from extensive vulnerabilities. It can still be used as a checksum to verify data integrity, but only against unintentional corruption. It remains suitable for other non-cryptographic purposes, for example for determining the partition for a particular key in a partitioned database, and may be preferred due to lower computational requirements than more recent Secure Hash Algorithms algorithms. MD5 is originally designed as a cryptographic message authentication code algorithm for use on the internet, MD5 hashing is no longer considered reliable for use as a cryptographic checksum because security experts have demonstrated techniques capable of easily producing MD5 collisions on commercial off-the-shelf computers. An encryption collision means two files have the same hash. Hash functions are used for message security, password security, computer forensics and cryptocurrency. IETF suggests MD5 hashing can still be used for integrity protection, noting: "Where the MD5 checksum is used inline with the protocol solely to protect against errors, an MD5 checksum is still an acceptable use." However, it added that "any application and protocol that employs MD5 for any purpose needs to clearly state the expected security services from their use of MD5." <br>                  <br>
+                  <br>
+               </div>
 </body>
 </html>

@@ -4,14 +4,110 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Image Decryption</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        body{
+            
+                background-image: url(/static/background.jpg);
+        };
+        input[type=file] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+
+        p, h1, h2,h3, b{
+            color: white;
+        }
+
+        input[type=text] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        
+        button {
+          width: 100%;
+          background-color:  #11a0a0;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        button:hover {
+          background-color:  #1a979794;
+        }
+        
+        div {
+          border-radius: 5px;
+          background-color: #a0d8d8e8;;
+          padding: 20px;
+          width: 50%;
+        }
+
+        .container{
+            background-color: black;
+            width: fit-content;
+        }
+        </style>
+
+        <style>
+            img {
+              float: right;
+            }
+            </style>
 </head>
 <body>
+  <h2>Image Decryption</h2>
+  <div class="row">
+  <div class="column" id="div1">
     <form id="img-form" action="{{url_for('imdec')}}" method='POST' autocomplete="off" enctype="multipart/form-data">
         <input type="file" name="file"><br><br>
         <label for="fname"> Enter Key to Decrypt Image : </label>
         <input type="text" id="text" name="imgtext"><br><br>
         
-        <button type="submit" value="submit" name="imagedec">Encrypt</button> 
+        <button type="submit" value="submit" name="imagedec">Decrypt</button> 
+
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <h2>Image Decryption</h2>            
+      <p><img src="/static/Imagedec.jpg" alt="fe" style="width:300px;height:200px;margin-left:15px;">
+          <p> Decryption is a process that transforms encrypted information into its original format.
+
+            The process of encryption transforms information from its original format — called plaintext — into an unreadable format — called ciphertext — while it is being shared or transmitted.
+            
+            To do this, parties to a private conversation use an encryption scheme, called an algorithm, and the keys to encrypt and decrypt messages. (Encrypted messages are called ciphertext, as algorithms are also called ciphers.)
+            
+            Message recipients decrypt the information back into its original, readable format. Future messages when passed through the system are encrypted, and vice versa. There are various types of decryption which are as follows −
+
+            <br> Symmetric Decryption − In symmetric encryption, the same mathematical equation both encrypts and decrypts the information. The following example, a simple letter substitution cipher, including A=B, B=C, etc.
+            
+            It is symmetrical because it can easily reverse the process to decrypt the message. If it can send a message using a symmetric encryption method, the recipients should also have the key to decrypt the file.
+            
+            <br> Asymmetric Decryption − Asymmetric decryption methods also known as public-key decryption. It can use a system including a set of connected keys. In this system, anything encoded with one key needed the other key to decrypt, etc.
+            
+            When it can encrypt a message using someone’s public key, it can understand that only a recipient possessing the corresponding private key can read it.
+            
+            <br> Hashing − Hashing is a form of encryption that need a specialized one-way encryption key. If it can hash a given volume of information, it will create a unique output string to that data, but it is impossible to reconstruct the information from the output string. It can re-encode the original information and compare it to the result string to check it.
+            
+            This can serve as a type of error correction in encoding. Hashing a message and supporting that value to the correspondents provides that they can hash the message themselves and compare the values. As long as the two output strings match, recipients understand the message is full and unaltered.
+
+            <br>
+           </div>
 </body>
 </html>

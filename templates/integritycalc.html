@@ -4,21 +4,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Integrity Calculator</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+      body{
+          
+              background-image: url(/static/background.jpg);
+      };
+      input[type=file] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      p, h1, h2,h3, b{
+          color: white;
+      }
+
+      input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      
+      button {
+        width: 100%;
+        background-color:  #11a0a0;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        background-color:  #1a979794;
+      }
+      
+      div {
+        border-radius: 5px;
+        background-color: #a0d8d8e8;;
+        padding: 20px;
+        width: 50%;
+      }
+
+      .container{
+          background-color: black;
+          width: fit-content;
+      }
+      </style>
+
+      <style>
+          img {
+            float: right;
+          }
+          </style>
 </head>
 <body>
+  <h2>Integrity Calculator  </h2>
+  <div class="row">
+  <div class="column" id="div1">
     <form id="integrity-form" action="{{url_for('integritycheck')}}"  method='POST' autocomplete="off" enctype="multipart/form-data">
+      <label for="fname"> Select file to calculate Hash </label> <br><br>  
+      <input type="file" name="file1" multiple><br><br>
+      <label for="fname">Select file to calculate Hash  </label><br><br>
+      <input type="file" name="file2" ><br><br>
         
-        <label for="fname">Select File to calculate Hash  </label>
-        <input type="file" name="file1" ><br><br>
-        
-   
-        <br><br>
-        
-        
-            <label for="fname">Select File to calculate Hash  </label>
-            <input type="file" name="file2" ><br><br>
-            
-            <button type="submit" value="submit" name="integrity">calculate</button> </form>
+        <button type="submit" value="submit" name="integrity">calculate</button> </form>
+        </div>
+        </div>
+        <br>
+        <div class="container">
+          <h2>Integrity Calculator</h2>            
+          <p><img src="/static/integritycalc.jpg" alt="fe" style="width:250px;height:200px;margin-left:15px;">
+              <p> Data integrity is important as it guarantees and secures the searchability and traceability of your data to its original source. Data performance and stability also increase when you ensure effective data accuracy and data protection. Maintaining the integrity of data and ensuring the completeness of data is essential. Integrity checking tools can detect whether any critical system files have been changed, thus enabling the system administrator to look for unauthorized alteration of the system. Integrity checkers examine stored files or network packets to determine if they have been altered or changed.Maintaining data integrity is important for several reasons. For one, data integrity ensures recoverability and searchability, traceability (to origin), and connectivity. Protecting the validity and accuracy of data also increases stability and performance while improving reusability and maintainability. Technology drives every aspect of business and spending is on the rise across all industries. While an increase in spending on technology is unavoidable for businesses if they hope to stay competitive, the importance of understanding the return on investment (ROI) for your technology cannot be understated. Technology can make or break a business in today’s competitive marketplace. Four in ten businesses report that they worry they are not spending enough on technology. In a survey conducted by allBusiness, small business owners report that technology fails to live up to its hoped-for return on investment. That’s why many Integrity Data Dynamics GP Payroll and HR Solutions have ROI calculators. 
+                
+                <br>
+               </div>
 </body>
 </html>

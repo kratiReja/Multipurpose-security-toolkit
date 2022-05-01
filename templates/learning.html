@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        body {
+
+            background-image: url(/static/background.jpg);
+        }
+
+        .row {
+            display: flex;
+        }
+
+        #div1 {
+            border-radius: 5px;
+            background-color: #d7f9f9e8;
+            
+            padding: 30px;
+            width: 50%;
+        }
+
+        #div2 {
+            border-radius: 5px;
+            padding: 10px;
+            width: 50%;
+        }
+
+        p,
+        h1,
+        h2,
+        h3,
+        b {
+            color:black;
+        }
+
+        .something {
+            background-color: #a0d8d8e8;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container {
+            background-color: #a0d8d8e8;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+
+</head>
+
+<body style="background-color:powderblue;">
+    <div class="container">
+        <h2>OSINT</h2>
+        <h3>Reverse Image Searching</h3>
+        <p>Tools:<br>Google image search<br>Yandex<br>Tineye.com<br></p>
+        <h3>Exif Data</h3>
+        <p> Tool which can be used to find image metadata.<br>
+            <a href="http://exif.regex.info/exif.cgi">visit this!</a>
+        </p>
+        <h3>Email OSINT</h3>
+        <p>If you have an email address or if you have some information regarding it you can use the following tools and
+            websites to find more information on it and also to verify if the information you found is
+            legit.<br>Hunter.io<br>phonebook.cz<br>EmailHippo to verify email address<br>emailchecker<br>
+        </p>
+        <h3>Username OSINT</h3>
+        <p>
+            you can use the following websites to check if a username you found is legit or not or you can use this to
+            find
+            more information on a user<br>NameChk:<a href="https://namechk.com/">link</a><br>WhatsMyName:<a
+                href="https://whatsmyname.app/">link</a><br>NameCheckup:<a href="https://namecheckup.com/">link</a><br>
+        </p>
+    </div>
+    <div class="something">
+        <h2>Useful Penetration Testing Information</h2>
+        <h3>Reconnaissance commands</h3>
+        <p>nmap -T4 -p- -A [ip] goto scanning command<br>Nmap flag Description<br>-sV Attempts to determine the version
+            of the services running <br> -p or -p Port scan for port a single port or scan all ports <br> -Pn Disable
+            host discovery and just scan for open ports <br>-A Enables OS and version detection, executes in-build
+            scripts for further enumeration <br>-sC Scan with the default nmap scripts<br>-v Verbose mode<br>-sU UDP
+            port scan<br>-sS TCP SYN port scan</p>
+        <h3>Directory Hunting</h3>
+        <p>goto command using the tool GoBuster, gobuster dir -u http://[ip]:3333 -w [word list location]<br>GoBuster
+            flag Description<br>-e Print the full URLs in your console <br>-u The target URL <br>-w Path to your
+            wordlist <br>-U and -P Username and Password for Basic Auth <br>-p [x] Proxy to use for requests <br>-c
+            [http cookies] Specify a cookie for simulating your authentication.
+
+        </p>
+        <h3>Privilege Escalation</h3>
+        <p>Goto commands for abusing misconfigurations to get root and administrator access
+            respectively on Linux and windows.<br>sudo -l command and command to find SUID ESC "find / -type f - perm
+            -04000 -ls 2>/dev/null"
+            to get root access.For Windows machine user can run Windowsexploit suggester<br>gtfo bins a website for
+            linux priv esc methods:<a href="https://gtfobins.github.io/">link</a>
+        </p>
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

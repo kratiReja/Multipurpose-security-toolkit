@@ -4,14 +4,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SHA512</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+      body{
+          
+              background-image: url(/static/background.jpg);
+      };
+      input[type=file] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      p, h1, h2,h3, b{
+          color: white;
+      }
+
+      input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      
+      button {
+        width: 100%;
+        background-color:  #11a0a0;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        background-color:  #1a979794;
+      }
+      
+      div {
+        border-radius: 5px;
+        background-color: #a0d8d8e8;;
+        padding: 20px;
+        width: 50%;
+      }
+
+      .container{
+          background-color: black;
+          width: fit-content;
+      }
+      </style>
+
+      <style>
+          img {
+            float: right;
+          }
+          </style>
 </head>
 <body>
+  <h2>SHA 512</h2>
+  <div class="row">
+  <div class="column" id="div1">
     <form id="sha512-form" action="{{url_for('shaaa')}}"  method='POST' autocomplete="off" enctype="multipart/form-data">
-        
-        <label for="fname">Select File to calculate Hash  </label>
-        <input type="file" name="file"><br><br>
+      <label for="fname"> Select file to calculate hash </label>   
+      <input type="file" name="file"><br><br>
         
         <button type="submit" value="submit" name="sha512">calculate</button> </form>
+        </div>
+        </div>
+        <br>
+        <div class="container">
+          <h2>SHA512</h2>            
+          <p><img src="/static/SHA256.jpg" alt="fe" style="width:200px;height:200px;margin-left:15px;">
+              <p> SHA-512 Cryptographic Hash Algorithm. A cryptographic hash (sometimes called 'digest') is a kind of 'signature' for a text or a data file. SHA-512 generates an almost-unique 512-bit (32-byte) signature for a text. SHA-512 is a hashing algorithm that performs a hashing function on some data given to it. Hashing algorithms are used in many things such as internet security, digital certificates and even blockchains. Since hashing algorithms play such a vital role in digital security and cryptography, this is an easy-to-understand walkthrough, with some basic and simple maths along with some diagrams, for a hashing algorithm called SHA-512. It’s part of a group of hashing algorithms called SHA-2 which includes SHA-256 as well which is used in the bitcoin blockchain for hashing. SHA-512 does its work in a few stages. These stages go as follows:<br> <br> 1. Input formatting
+                <br> <br>  2. Hash buffer initialization
+                <br> <br> 3. Message Processing
+                <br> <br> 4. Output
+
+                <br>
+                <br>
+                <br></div>
 </body>
 </html>

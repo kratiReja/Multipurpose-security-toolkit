@@ -1,11 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closedp</title>
+    <style>
+        body{
+            
+                background-image: url(/static/background.jpg);
+        };
+        input[type=file] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
 
+        p, h1, h2,h3, b{
+            color: black;
+        }
 
-<body style="background-color:powderblue;">
+        input[type=text] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        
+        button {
+          width: 100%;
+          background-color:  #11a0a0;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        button:hover {
+          background-color:  #1a979794;
+        }
+        
+        div {
+          border-radius: 5px;
+          background-color: #a0d8d8e8;;
+          padding: 50px;
+          width: 90%;
+        }
 
+        .container{
+            background-color: black;
+            width: fit-content;
+        }
+        </style>
+
+        <style>
+            img {
+              float: right;
+            }
+            </style>
+</head>
+
+<body>
+    <div>
     <h1>Scan successfully Completed no ports are open or the ports are filtered </h1>
     <h2>Here are the closed ports {{ nani }}</h2>
+    </div>
 
 </body>
 

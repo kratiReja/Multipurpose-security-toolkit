@@ -1,3 +1,4 @@
+ 
 <!DOCTYPE html>
 <html lang="en">
     <title> Multi Purpose Web Security Tool Kit </title>
@@ -91,6 +92,22 @@
     display: block;
   }
 }
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #d3f7f7e8, 0 0 30px #d2f8f8e8, 0 0 40px #a0d8d8e8, 0 0 50px #1a979794, 0 0 60px #11a0a0, 0 0 70px #008d8d;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #017575, 0 0 40px #017575, 0 0 50px #017575, 0 0 60px #017575, 0 0 70px #017575, 0 0 80px #017575;
+  }
+}
     </style>
 
 </head>
@@ -104,14 +121,15 @@
       <a class="active" href="{{url_for('home')}}"> Home</a> 
       <a class="active" href="#aboutus"> About Us</a> 
       <a class="active" href="#tools"> Tools</a> 
+      <a class="active" href="{{url_for('learnings')}}">Learning</a> 
       <a class="active" href="#team"> Team</a> 
     </div></nav>
       <br>
       <div id="aboutus">
-      <b><h2 style="text-align:center; color: white; font-size: 50px"> Multi Purpose Web Security Tool Kit.</h2></b><br>
+      <b><h2 style="text-align:center; color: white; font-size: 70px" class="glow"> Multi Purpose Web Security Tool Kit.</h2></b><br>
      </div>
       <div >
-        <br><br><br><br>
+        <br>
       <b><h2 style="text-align:center; color: rgb(215, 208, 252); font-size: 40px"> About Us </h2></b>
       
         <p> We provide one step solution to cyber security professionals, students and for people who are enthusiastic to learn new things about their security, networking and many more stuffs. Therefore, the main purpose is that we will empower the people with common security tools which are required for every person in their personal day to day life or professional life as well. We will also provide learnings on how to use various tools and knowledge about how to perform the respective tasks. Hence The tools are carefully selected and organized to make it easy to search, find and implement basic cybersecurity controls so that peers get familiar with all of them.   </p>
@@ -127,11 +145,11 @@
     <a href="{{url_for('steg')}}"><img border="0"src="/static/IS.jpg" width="300" height="300"</a>
     <a href="{{url_for('encrypt')}}" > <img border="0" alt="Encryption and Decryption" src="/static/ED.jpg" width="300" height="300"</a>
     <a href="{{url_for('fenc')}}"> <img border="0" alt="File Encryption" src="/static/FED.jpg" width="300" height="300"</a></a>
-    <a href="{{url_for('hash')}}">Hash Calculator</a>
-    <a href="{{url_for('imageenc')}}">Image Encryption</a>
-    <a href="{{url_for('checkurl')}}">Dectect Malicious Url</a>
-    <a href="{{url_for('pscan')}}">Port Scanner</a>
-    
+    <a href="{{url_for('hash')}}"> <img border="0" alt="Hash Calculator" src="/static/Hashcalculatorcanva.jpg" width="290" height="300"</a></a>
+    <a href="{{url_for('imageenc')}}"><img border="0" alt="Image Encryption" src="/static//ImageEncryptioncanva.jpg" width="290" height="300"</a></a>
+    <a href="{{url_for('checkurl')}}"><img border="0" alt="Malicious Detection" src="/static/Maliciousdetectioncanva.jpg" width="290" height="300"</a></a>
+    <a href="{{url_for('pscan')}}"><img border="0" alt="Port Scanner" src="/static/Portscancanva.jpg" width="290" height="300"</a></a>
+
     
     
 
@@ -150,3 +168,6 @@
     
     </body>
     </html>
+      
+
+

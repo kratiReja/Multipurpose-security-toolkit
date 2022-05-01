@@ -372,6 +372,11 @@ def pscan():
         user = request.args.get('nm')
         return redirect(url_for('hello_world', name=user))
 
+## Learning
+@app.route('/learnings')
+def learnings():
+    return render_template("learning.html")
+
 
     
 if __name__=="__main__":
